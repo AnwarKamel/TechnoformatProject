@@ -6,7 +6,6 @@ import android.os.Bundle
 import com.ouailanwarkamel.technoformatproject.data.SharedPrefManager
 import com.ouailanwarkamel.technoformatproject.ui.LoginActivity
 import kotlinx.android.synthetic.main.activity_main.*
-
 class MainActivity : AppCompatActivity() {
 
     override fun onStart() {
@@ -26,6 +25,8 @@ class MainActivity : AppCompatActivity() {
 
         var user =  SharedPrefManager.getInstance(this).user
 
+
+        startActivity(Intent(this  , MainActivity2::class.java))
 
         tv_name.text = user.name.toString()
 
