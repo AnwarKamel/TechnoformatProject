@@ -17,9 +17,9 @@ Simple app, Formation android in Techno format School
 
 <p>
 
-<img src="assets/1.PNG" alt="drawing" width="400"/> 
+<img src="assets/1.PNG" alt="drawing" width="200"/> 
 
-<img src="assets/2.PNG" alt="drawing" width="400"/>
+<img src="assets/2.PNG" alt="drawing" width="200"/>
 <br>
 <img src="assets/3.PNG" alt="drawing" width="800"/>
   </p>
