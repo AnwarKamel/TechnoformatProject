@@ -26,7 +26,7 @@ class MainActivity : AppCompatActivity() {
         var user =  SharedPrefManager.getInstance(this).user
 
 
-        startActivity(Intent(this  , MainActivity2::class.java))
+      //  startActivity(Intent(this  , MainActivity2::class.java))
 
         tv_name.text = user.name.toString()
 

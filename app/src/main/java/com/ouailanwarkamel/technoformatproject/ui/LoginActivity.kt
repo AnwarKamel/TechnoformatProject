@@ -37,8 +37,6 @@ class LoginActivity : AppCompatActivity() {
         setContentView(R.layout.activity_login)
 
 
-
-
         btn_login.setOnClickListener {
             val email = edit_email.text.toString().trim()
             val password = edit_password.text.toString().trim()
@@ -86,26 +84,16 @@ class LoginActivity : AppCompatActivity() {
                 progressBarSu.visibility = View.GONE
 
                 val responseData = response.body()
-                Toast.makeText(
-                    this@LoginActivity,
-                    " " + responseData.toString(),
-                    Toast.LENGTH_SHORT
-                ).show()
+                Toast.makeText(this@LoginActivity, " " + responseData.toString(), Toast.LENGTH_SHORT).show()
 
                 if (responseData?.error == false) {
                     var id = responseData.id!!.toInt()
                     var name = responseData.name.toString()
                     var email = responseData.email.toString()
                     var pass = responseData.password.toString()
-                    var error = responseData.error
                     var created_at = responseData.createdAt.toString()
-                    var error_code = responseData.errorCode
 
-                    Toast.makeText(
-                        this@LoginActivity,
-                        " " + responseData.toString(),
-                        Toast.LENGTH_SHORT
-                    ).show()
+                    Toast.makeText( this@LoginActivity, " " + responseData.toString(), Toast.LENGTH_SHORT).show()
                     SharedPrefManager.getInstance(applicationContext)
                         .saveUser(UserDataInfo(id, name, email, pass, created_at))
 
@@ -114,11 +102,7 @@ class LoginActivity : AppCompatActivity() {
 
 
                     if (responseData.errorCode == 5) {
-                        Toast.makeText(
-                            this@LoginActivity,
-                            "Login credentials are wrong. Please try again!",
-                            Toast.LENGTH_SHORT
-                        ).show()
+                        Toast.makeText(this@LoginActivity, "Login credentials are wrong. Please try again!", Toast.LENGTH_SHORT).show()
                     }
 
                 }

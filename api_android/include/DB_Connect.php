@@ -1,5 +1,6 @@
 <?php
 class DB_Connect {
+
     private $conn;
  
     // Connecting to database
